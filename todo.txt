@@ -1,0 +1,10 @@
+-to add photo to product
+-if in products we dont have product show message for no products
+- create better view of todo like card
+-add other data from uni project reqirements
+-to do better design login and data
+-for registration to add phone
+
+-task 4
+-task5
+-restore pass

@@ -1,0 +1,6 @@
+database warehouse_management
+
+table categories columns id , name
+table products columns  id productName, quantity, sellPrice, buyPrice, category_id, comments
+
+table users columns id, email, full_name, password

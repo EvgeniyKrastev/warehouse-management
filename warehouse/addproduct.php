@@ -39,13 +39,16 @@ $result = mysqli_query($conn, $sqlCategories);
                     <input type="file" name="photo" id="photo" class="form-control" accept=".jpg,.jpeg,.png"/>
             </div>
             <div class="form-field mb-4">
-                    <input type="text" name="buyPrice" class="form-control" id="buyPrice" placeholder="Buying Price:">
+                    <input type="text" name="buyPrice" class="form-control" id="buyPrice" placeholder="Buying Price:" required>
             </div>
             <div class="form-field mb-4">
-                    <input type="text" name="sellPrice" class="form-control" id="sellPrice" placeholder="Sell Price:">
+                    <input type="text" name="sellPrice" class="form-control" id="sellPrice" placeholder="Sell Price:" required>
             </div>
             <div class="form-field mb-4">
                     <input type="text" name="quantity" class="form-control" id="quantity" placeholder="Quantity:">
+            </div>
+            <div class="form-field mb-4">
+                    <input type="text" name="code" class="form-control" id="quantity" placeholder="Code (unique): doesn't work for now" required>
             </div>
             <div class="form-field mb-4">
                     <input type="submit" name="create" value="Изпрати" class="btn btn-success" />

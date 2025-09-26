@@ -39,7 +39,7 @@
             // Име: само латински букви (малки и големи), дължина 5–15 символа 
             // for white space in the fullname is s "/^[A-Za-z\s]{5,35}$/"
             // withous white space "/^[A-Za-z]{5,35}$/"
-            if(!preg_match("/^[A-Za-z\s]{5,35}$/", $fullName)){
+            if((!preg_match("/^[A-Za-z\s]{5,35}$/", $fullName)) && (!preg_match("/^[A-Za-z]{5,35}$/", $fullName))){
                 array_push($errors, "Full name must be 5–35 characters long and contain only Latin letters (A–Z, a–z).");
             }
 
