@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <title>Edit Product</title>
-</head>
-<body>
+<?php
+include("templates/header.php");
+?>
     <?php
     $id = $_GET['id'];
     if($id){
@@ -25,8 +18,9 @@
     }
 
     ?>
-    <a href="index.php" class="btn btn-warning">Назад</a>
+    
     <div class="create-form w-100 mx-auto p-4" style="max-width:500px;">
+        <a href="index.php" class="btn btn-warning">Назад</a>
         <h3 class="mb-2">Edit Product</h3>
         <!-- enctype="multipart/form-data" -->
         <form action="process.php" method="post" enctype="multipart/form-data">
@@ -54,10 +48,23 @@
                 <textarea name="comments" class="form-control" id="comments" cols="10" rows="1"
                           placeholder="Enter Comments:"><?php echo $product['comments']; ?></textarea>
             </div>
+            <div class="form-field mb-4">
+                <label for="image" class="form-label">Current Photo:</label><br>
+                <?php if (!empty($product['image'])): ?>
+                    <img src="uploads/<?php echo htmlspecialchars($product['image']); ?>" 
+                        alt="Current Image" 
+                        style="max-width:150px; height:auto; border:1px solid #ccc; margin-bottom:10px;">
+                <?php else: ?>
+                    <p>No image uploaded</p>
+                <?php endif; ?>
+            </div>
+
+            <!-- Скриваме името на текущия файл, за да го запазим при нужда -->
+            <input type="hidden" name="current_image" value="<?php echo htmlspecialchars($product['image']); ?>">
 
             <div class="form-field mb-4">
-                <label for="photo" class="form-label">Add Photo:</label>
-                <input type="file" name="photo" id="photo" class="form-control" accept=".jpg,.jpeg,.png"/>
+                    <label for="photo" class="form-label">Add Photo:</label>
+                    <input type="file" name="image" id="image" class="form-control" accept=".jpg,.jpeg,.png"/>
             </div>
 
             <div class="form-field mb-4">
@@ -98,5 +105,7 @@
         ?> -->
 
     </div>
-</body>
-</html>
+
+<?php
+include("templates/footer.php");
+?>

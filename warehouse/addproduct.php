@@ -14,7 +14,7 @@ $result = mysqli_query($conn, $sqlCategories);
         <a href="index.php" class="btn btn-warning">Назад</a>
         <h3 class="mb-2">Add Product</h3>
         <!-- enctype="multipart/form-data" -->
-        <form action="process.php" method="post" >
+        <form action="process.php" method="post" enctype="multipart/form-data">
 
                 <div class="mb-3">
                         <label for="category" class="form-label">Category</label>
@@ -35,9 +35,16 @@ $result = mysqli_query($conn, $sqlCategories);
                     <textarea name="comments" class="form-control" id="comments" cols="10" rows="1" placeholder="Enter Comments:"></textarea>
             </div>
             <div class="form-field mb-4">
-                    <label for="photo" class="form-label">Add Photo:</label>
-                    <input type="file" name="photo" id="photo" class="form-control" accept=".jpg,.jpeg,.png"/>
+                <label for="image" class="form-label">Add Photo:</label>
+                <input type="file" name="image" id="image" class="form-control" accept=".jpg,.jpeg,.png"/>
+
+                <!-- Контейнер за преглед -->
+                <div id="preview-container" style="margin-top:10px;">
+                        <img id="preview" src="" alt="No image selected" 
+                        style="max-width:150px; height:auto; display:none; border:1px solid #ccc;"/>
+                </div>
             </div>
+
             <div class="form-field mb-4">
                     <input type="text" name="buyPrice" class="form-control" id="buyPrice" placeholder="Buying Price:" required>
             </div>
@@ -54,6 +61,37 @@ $result = mysqli_query($conn, $sqlCategories);
                     <input type="submit" name="create" value="Изпрати" class="btn btn-success" />
             </div>
         </form>
+
+        <script>
+        document.getElementById('image').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('preview');
+
+        if (file) {
+                // Проверка за тип файл (по желание)
+                const allowed = ['image/jpeg','image/png','image/gif'];
+                if (!allowed.includes(file.type)) {
+                alert('Please select a JPG, PNG, or GIF image.');
+                preview.style.display = 'none';
+                preview.src = '';
+                return;
+                }
+
+                // Показване на избраната снимка
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+        } else {
+                // Ако няма избран файл
+                preview.style.display = 'none';
+                preview.src = '';
+        }
+        });
+        </script>
+
 
         <!-- <?php
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
