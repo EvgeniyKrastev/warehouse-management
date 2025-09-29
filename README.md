@@ -13,7 +13,6 @@ Functionalities:
 
 - database queries in database_queries.txt
 
-
 <img width="1906" height="524" alt="{783F9126-2141-4906-81C2-211E70900E3E}" src="https://github.com/user-attachments/assets/88fdac69-81f1-46e8-bada-b9263d6b7a6d" />
 <img width="1918" height="845" alt="{0DF16B83-8099-48A7-8AC0-682CBE854D56}" src="https://github.com/user-attachments/assets/a28e9ad7-e264-41a5-886b-b3ff194d91c4" />
 <img width="1919" height="848" alt="{AFC33D45-1484-44E3-BA9A-71AE5D92E29C}" src="https://github.com/user-attachments/assets/ec29ab63-2aad-4f46-929d-2747137e10c2" />
