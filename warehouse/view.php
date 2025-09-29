@@ -23,7 +23,7 @@ include("templates/header.php");
                     <p>No image uploaded</p>
                 <?php endif; ?>
             </div>
-                <p>More info: <?php echo $data['comments']; ?></p>
+                <p>Comment: <?php echo $data['comments']; ?></p>
                 <p>Price for one: <?php echo $data['sellPrice']; ?></p>
                 <p>Quantity: <?php echo $data["quantity"]?></p>
             <?php

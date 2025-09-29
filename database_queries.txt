@@ -1,6 +1,29 @@
 database warehouse_management
 
 table categories columns id , name
-table products columns  id productName, quantity, sellPrice, buyPrice, category_id, comments
 
-table users columns id, email, full_name, password
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    productName VARCHAR(255),
+    quantity VARCHAR(255),
+    sellPrice VARCHAR(255),
+    buyPrice VARCHAR(255),
+    category_id int,
+    comments MEDIUMTEXT,
+    image VARCHAR(255)
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(128),
+    email VARCHAR(255),
+    passoword VARCHAR(255)
+);
+
+ALTER TABLE products
+ADD FOREIGN KEY (id) REFERENCES categories(id);

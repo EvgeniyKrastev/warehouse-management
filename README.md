@@ -3,9 +3,17 @@ Technologies: HTML, CSS, BootStrap, PHP.
 Functionalities:
   -login. 
   -logout. 
-  -filters: (is user logged in, fullname between 5 and 35 latin letters, valid email, pass atleast 1 upper and lower case 8 chars and special simbols, valid phone number).
+  -filters: (is user logged in, fullname(big small latin letters and _ ,15 simbols between 5 and 35 latin letters, valid email, pass atleast 1 upper and lower case 8 chars and special simbols(@-_ ~ |), valid phone number)(name - big small latin letters and _ ,15 simbols).
+
   -create read update delete product (drop down menu for categories).
+
   - data base with 3 tables categories products users.
+
+  -if you aren't logged in you can't view or work with data.
+
+- database queries in database_queries.txt
+
+
 <img width="1915" height="542" alt="{8058D8F3-318D-4317-B40F-812E830BDB0E}" src="https://github.com/user-attachments/assets/ae3a09e9-79d7-4033-9740-6bcea4bab557" />
 <img width="1919" height="880" alt="{7488AE8B-A82D-4FB1-BDB2-95A120189BCA}" src="https://github.com/user-attachments/assets/1b24463e-a172-41f0-9fe8-7d3eca439cbc" />
 <img width="1920" height="811" alt="{F662B2B9-58CD-4958-B3D2-67064858331B}" src="https://github.com/user-attachments/assets/4b9d3266-3f61-43c1-a291-2f94f820f40d" />
