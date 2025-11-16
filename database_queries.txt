@@ -27,3 +27,6 @@ CREATE TABLE users (
 
 ALTER TABLE products
 ADD FOREIGN KEY (id) REFERENCES categories(id);
+
+
+sss
