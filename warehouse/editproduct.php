@@ -4,8 +4,8 @@ include("../templates/header.php");
     <?php
     $id = $_GET['id'];
     if($id){
-        include("connect.php");
-        $sqlEdit = "SELECT * FROM products WHERE id = $id";
+        include("../connect.php");
+        $sqlEdit = "SELECT * FROM products WHERE product_id = $id";
         $result = mysqli_query($conn,$sqlEdit); 
         $product = mysqli_fetch_assoc($result); 
         // for what is this $product = mysqli_fetch_assoc($result);
@@ -31,8 +31,8 @@ include("../templates/header.php");
                 <select name="category_id" id="category" class="form-select" required>
                     <option value="">-- Select Category --</option>
                     <?php while($cat = mysqli_fetch_assoc($categoriesResult)) { ?>
-                        <option value="<?php echo $cat['id']; ?>"
-                            <?php if($cat['id'] == $product['category_id']) echo "selected"; ?>>
+                        <option value="<?php echo $cat['category_id']; ?>"
+                            <?php if($cat['category_id'] == $product['category_id']) echo "selected"; ?>>
                             <?php echo htmlspecialchars($cat['name']); ?>
                         </option>
                     <?php } ?>
@@ -83,7 +83,7 @@ include("../templates/header.php");
             </div>
 
             <!-- Hidden input за ID -->
-            <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
+            <input type="hidden" name="id" value="<?php echo $product['product_id']; ?>">
 
             <div class="form-field mb-4">
                 <input type="submit" name="update" value="Запази" class="btn btn-success" />

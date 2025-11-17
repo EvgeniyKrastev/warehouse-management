@@ -39,10 +39,16 @@ include("../templates/header.php");
         unset($_SESSION["delete"]);
         }
     ?>
-
+<div class="d-flex flex-column flex-sm-row gap-2">
     <div class="button">
         <a class="btn btn-info" href="categoryManagement/index.php">Manage Categories</a>
     </div>
+
+    <div class="button">
+        <a class="btn btn-success" href="/warehouse-management/warehouse/addproduct.php" >Add new Product</a>
+    </div>
+</div>
+    
 
     <table class="table tabled-bordered">
         <thead>
@@ -82,9 +88,9 @@ include("../templates/header.php");
                 <td><?php echo htmlspecialchars($data["sellPrice"]); ?></td>
                 <td><?php echo htmlspecialchars($data["quantity"]); ?></td>
                 <td>
-                    <a class="btn btn-info" href="view.php?id=<?php echo $data["id"]; ?>">View</a>
-                    <a class="btn btn-warning" href="edit.php?id=<?php echo $data["id"]; ?>">Edit</a>
-                    <a class="btn btn-danger" href="delete.php?id=<?php echo $data["id"]; ?>">Delete</a>
+                    <a class="btn btn-info" href="view.php?id=<?php echo $data["product_id"]; ?>">View</a>
+                    <a class="btn btn-warning" href="editproduct.php?id=<?php echo $data["product_id"]; ?>">Edit</a>
+                    <a class="btn btn-danger" href="delete.php?id=<?php echo $data["product_id"]; ?>">Delete</a>
                 </td>
             </tr>
         <?php

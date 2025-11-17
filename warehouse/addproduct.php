@@ -6,7 +6,7 @@ include("../templates/header.php");
 include("../connect.php");
 
 // Вземаме категориите от базата
-$sqlCategories = "SELECT id, name FROM categories";
+$sqlCategories = "SELECT category_id, name FROM categories";
 $result = mysqli_query($conn, $sqlCategories);
 ?>
     <div class="create-form w-100 mx-auto p-4" style="max-width:500px;">
@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $sqlCategories);
                 <select name="category_id" id="category" class="form-select" required>
                 <option value="">-- Select Category --</option>
                 <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                        <option value="<?php echo $row['id']; ?>">
+                        <option value="<?php echo $row['category_id']; ?>">
                         <?php echo htmlspecialchars($row['name']); ?>
                         </option>
                 <?php } ?>

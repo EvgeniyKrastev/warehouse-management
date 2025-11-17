@@ -2,7 +2,7 @@
 $id =  $_GET["id"];
 if($id){
     include("../connect.php");
-    $sqlDelete = "DELETE FROM products WHERE id = $id";
+    $sqlDelete = "DELETE FROM products WHERE product_id = $id";
 if(mysqli_query($conn,$sqlDelete)){
     session_start();
     $_SESSION["delete"] = "Product deleted successfully!";

@@ -31,7 +31,7 @@ if (isset($_POST["update"])) {
     // 🔥 Правилна SQL заявка
     $sqlUpdate = "UPDATE categories 
                   SET name='$categoryName'
-                  WHERE id='$id'";
+                  WHERE category_id='$id'";
 
     if (mysqli_query($conn, $sqlUpdate)) {
         $_SESSION["update"] = "Category updated successfully!";

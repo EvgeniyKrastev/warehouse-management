@@ -4,7 +4,7 @@ include("../../templates/header.php");
  <?php
 include("../../connect.php");
 // Вземаме категориите от базата
-$sqlCategories = "SELECT id, name FROM categories";
+$sqlCategories = "SELECT category_id, name FROM categories";
 $result = mysqli_query($conn, $sqlCategories);
 ?>
     <div class="create-form w-100 mx-auto p-4" style="max-width:500px;">

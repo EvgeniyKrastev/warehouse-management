@@ -85,7 +85,7 @@ if(isset($_POST["update"])){
                 sellPrice='$sellPrice',
                 quantity='$quantity',
                 image ='$newImage' 
-                WHERE id='$id'";
+                WHERE product_id='$id'";
 
     if(mysqli_query($conn, $sqlUpdate)){
         session_start();

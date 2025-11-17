@@ -62,8 +62,8 @@ include("../../templates/header.php");
             <tr>
                 <td><?php echo htmlspecialchars($data["name"]); ?></td>
                 <td>
-                    <a class="btn btn-warning" href="editcategory.php?id=<?php echo $data["id"]; ?>">Edit</a>
-                    <a class="btn btn-danger" href="deletecategory.php?id=<?php echo $data["id"]; ?>">Delete</a>
+                    <a class="btn btn-warning" href="editcategory.php?id=<?php echo $data["category_id"]; ?>">Edit</a>
+                    <a class="btn btn-danger" href="deletecategory.php?id=<?php echo $data["category_id"]; ?>">Delete</a>
                 </td>
             </tr>
         <?php

@@ -7,8 +7,8 @@ include("../templates/header.php");
     // we make request and we take the id and if is taken correctly we go to if()
     $id = $_GET["id"];
     if($id){
-        include("connect.php");
-        $sqlSelectPost = "SELECT * FROM products WHERE id = $id";  
+        include("../connect.php");
+        $sqlSelectPost = "SELECT * FROM products WHERE product_id = $id";  
         $result = mysqli_query($conn, $sqlSelectPost);
         while($data = mysqli_fetch_array($result)){
             ?>

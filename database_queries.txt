@@ -1,33 +1,29 @@
-database
+database name
  warehouse_management
 
-table categories columns id , name
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(128) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
 
 CREATE TABLE categories (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255)
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE products (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    productName VARCHAR(255),
-    quantity VARCHAR(255),
-    sellPrice VARCHAR(255),
-    buyPrice VARCHAR(255),
-    category_id int,
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    productName VARCHAR(255) NOT NULL,
+    quantity INT DEFAULT 0,
+    sellPrice DECIMAL(10,2) DEFAULT 0.00,
+    buyPrice DECIMAL(10,2) DEFAULT 0.00,
+    category_id INT NOT NULL,
     comments MEDIUMTEXT,
-    image VARCHAR(255)
+    image VARCHAR(255),
+    CONSTRAINT fk_products_category FOREIGN KEY (category_id) REFERENCES categories(categories_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
 );
-
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    full_name VARCHAR(128),
-    email VARCHAR(255),
-    passoword VARCHAR(255)
-);
-
-ALTER TABLE products
-ADD FOREIGN KEY (id) REFERENCES categories(id);
-
-
-sss

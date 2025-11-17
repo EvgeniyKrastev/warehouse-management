@@ -2,7 +2,7 @@
 $id =  $_GET["id"];
 if($id){
     include("../../connect.php");
-    $sqlDelete = "DELETE FROM categories WHERE id = $id";
+    $sqlDelete = "DELETE FROM categories WHERE category_id = $id";
 if(mysqli_query($conn,$sqlDelete)){
     session_start();
     $_SESSION["delete"] = "Category deleted successfully!";
