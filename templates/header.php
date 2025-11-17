@@ -20,7 +20,7 @@ if(!isset($_SESSION["user"])){
             <h1 class="bg-primary p-4"><a href="./index.php" class="text-light text-decoration-none">Dashboard</a></h1>
             <div class="menues p-4 mt-5">
                 <div class="menu">
-                    <a href="addproduct.php" class="text-light text-decoration-none"><strong>Add new Product</strong></a>
+                    <a href="/warehouse-management/warehouse/addproduct.php" class="text-light text-decoration-none"><strong>Add new Product</strong></a>
                 </div>
                 <div class="menu mt-5">
                     <a href="/warehouse-management/warehouse/index.php" class="text-light text-decoration-none"><strong>View Warehouse</strong></a>

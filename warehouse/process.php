@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST["create"])){
-    include("connect.php");
+    include("../connect.php");
 
     $category_id = mysqli_real_escape_string($conn, $_POST["category_id"]);
     $productName = mysqli_real_escape_string($conn, $_POST["productName"]);
@@ -43,7 +43,7 @@ if(isset($_POST["create"])){
 
 <?php
 if(isset($_POST["update"])){
-    include("connect.php");
+    include("../connect.php");
 
     $id = mysqli_real_escape_string($conn, $_POST["id"]);
     $category_id = mysqli_real_escape_string($conn, $_POST["category_id"]);
