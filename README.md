@@ -13,13 +13,15 @@ Functionalities:
 
 - database queries in database_queries.txt
 
-<img width="1906" height="524" alt="{783F9126-2141-4906-81C2-211E70900E3E}" src="https://github.com/user-attachments/assets/88fdac69-81f1-46e8-bada-b9263d6b7a6d" />
-<img width="1918" height="845" alt="{0DF16B83-8099-48A7-8AC0-682CBE854D56}" src="https://github.com/user-attachments/assets/a28e9ad7-e264-41a5-886b-b3ff194d91c4" />
-<img width="1919" height="848" alt="{AFC33D45-1484-44E3-BA9A-71AE5D92E29C}" src="https://github.com/user-attachments/assets/ec29ab63-2aad-4f46-929d-2747137e10c2" />
-<img width="740" height="488" alt="{5488D1B5-7C25-4080-BDB4-59026AC6A142}" src="https://github.com/user-attachments/assets/73cd0393-b854-489a-abce-45f8fcb9ec8c" />
+Photos
 
-<img width="1186" height="409" alt="{3F182539-5848-4987-8679-E35B04CE079D}" src="https://github.com/user-attachments/assets/4f97d3b1-f9f8-4ff9-af52-59f5bd162dff" />
-<img width="1528" height="629" alt="{0A1C1094-1C59-450F-860F-ADEDC57EA11F}" src="https://github.com/user-attachments/assets/7b79d54f-a9a7-4c1f-ba08-7343a650e8a5" />
+<img width="1861" height="492" alt="image" src="https://github.com/user-attachments/assets/e68b633a-4d85-4cbc-8fe6-e610e7fa281a" />
+<img width="752" height="529" alt="image" src="https://github.com/user-attachments/assets/6a599810-77a5-474c-baea-1392601d23cc" />
+<img width="1501" height="673" alt="image" src="https://github.com/user-attachments/assets/0f3ea15b-4ce5-48b7-b350-4ef724770176" />
+<img width="1235" height="499" alt="image" src="https://github.com/user-attachments/assets/35c1a837-688b-44de-b9fb-1c251872ef6d" />
+<img width="947" height="519" alt="image" src="https://github.com/user-attachments/assets/b4905c4c-1fd2-480c-8997-1122f7f0d5f2" />
+<img width="922" height="663" alt="image" src="https://github.com/user-attachments/assets/31755878-8cef-45cc-9739-3b5ea70d2a8e" />
+
 
 
 
