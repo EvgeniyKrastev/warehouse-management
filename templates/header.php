@@ -14,9 +14,21 @@ if(!isset($_SESSION["user"])){
     <title>Dashboard</title>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg bg-primary-subtle text-primary-emphasis p-2">
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="btn btn-info me-5" href="/warehouse-management/login/logout.php">Logout</a>
+                    <a class="nav-link active" aria-current="page" href="/warehouse-management/warehouse/index.php">Warehouse</a>
+                    <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+                </div>
+            </div>
+        </nav>
+
     <!-- d-flex justify-content-between make side bar go to left -->
-    <div class="dashboard d-flex justify-content-between">
-        <div class="sidebar bg-dark min-vh-100">
+    <!-- <div class="dashboard d-flex justify-content-between"> -->
+
+        <!-- <div class="sidebar bg-dark min-vh-100">
             <h1 class="bg-primary p-4"><a href="./index.php" class="text-light text-decoration-none">Dashboard</a></h1>
             <div class="menues p-4 mt-5">
                 
@@ -27,4 +39,6 @@ if(!isset($_SESSION["user"])){
                     <a href="/warehouse-management/login/logout.php" class="btn btn-info">Logout</a>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        
