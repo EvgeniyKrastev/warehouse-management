@@ -70,7 +70,7 @@
                 array_push($errors,"Phone number can only contain digits, spaces and dashes.");
             }
 
-            require_once "database.php";
+            require_once "../connect.php";
             $sql = "SELECT * FROM users WHERE email = '$email'";
 
             $result = mysqli_query($conn, $sql);
@@ -85,7 +85,7 @@
                     echo "<div class='alert alert-danger'>$error</div>";
                 }
             }else{
-                require_once "database.php";
+                require_once "../connect.php";
                 $sql = "INSERT INTO users (full_name ,email ,password ) VALUES (?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
                 // mysqli_stmt_init(); initialises statement and returns object suitable for mysqli
