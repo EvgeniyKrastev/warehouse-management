@@ -1,5 +1,5 @@
 <?php
-include("templates/header.php");
+include("../templates/header.php");
 ?>
 
 <div class="posts-list w-100 p-5">
@@ -39,6 +39,11 @@ include("templates/header.php");
         unset($_SESSION["delete"]);
         }
     ?>
+
+    <div class="button">
+        <a class="btn btn-info" href="categoryManagement/index.php">Manage Categories</a>
+    </div>
+
     <table class="table tabled-bordered">
         <thead>
             <tr>
@@ -52,7 +57,7 @@ include("templates/header.php");
         </thead>
         <tbody>
         <?php
-        include('connect.php');
+        include('../connect.php');
         $sqlSelect = "SELECT * FROM products";
         $result = mysqli_query($conn, $sqlSelect);
 
@@ -78,7 +83,7 @@ include("templates/header.php");
                 <td><?php echo htmlspecialchars($data["quantity"]); ?></td>
                 <td>
                     <a class="btn btn-info" href="view.php?id=<?php echo $data["id"]; ?>">View</a>
-                    <a class="btn btn-warning" href="editproduct.php?id=<?php echo $data["id"]; ?>">Edit</a>
+                    <a class="btn btn-warning" href="edit.php?id=<?php echo $data["id"]; ?>">Edit</a>
                     <a class="btn btn-danger" href="delete.php?id=<?php echo $data["id"]; ?>">Delete</a>
                 </td>
             </tr>
@@ -96,5 +101,5 @@ include("templates/header.php");
 </div>
 
 <?php
-include("templates/footer.php");
+include("../templates/footer.php");
 ?>

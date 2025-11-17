@@ -23,7 +23,7 @@ if(!isset($_SESSION["user"])){
                     <a href="addproduct.php" class="text-light text-decoration-none"><strong>Add new Product</strong></a>
                 </div>
                 <div class="menu mt-5">
-                    <a href="index.php" class="text-light text-decoration-none"><strong>View Warehouse</strong></a>
+                    <a href="/warehouse-management/warehouse/index.php" class="text-light text-decoration-none"><strong>View Warehouse</strong></a>
                 </div>
                 <div class="menu mt-5">
                     <a href="/warehouse-management/login/logout.php" class="btn btn-info">Logout</a>

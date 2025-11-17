@@ -1,33 +1,30 @@
 <?php
-include("templates/header.php");
+include("../templates/header.php");
 ?>
 
 <?php
-include("connect.php");
+include("../connect.php");
 
 // Вземаме категориите от базата
 $sqlCategories = "SELECT id, name FROM categories";
 $result = mysqli_query($conn, $sqlCategories);
 ?>
-    
     <div class="create-form w-100 mx-auto p-4" style="max-width:500px;">
         <a href="index.php" class="btn btn-warning">Назад</a>
         <h3 class="mb-2">Add Product</h3>
         <!-- enctype="multipart/form-data" -->
         <form action="process.php" method="post" enctype="multipart/form-data">
-
-                <div class="mb-3">
-                        <label for="category" class="form-label">Category</label>
-                        <select name="category_id" id="category" class="form-select" required>
-                        <option value="">-- Select Category --</option>
-                        <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                                <option value="<?php echo $row['id']; ?>">
-                                <?php echo htmlspecialchars($row['name']); ?>
-                                </option>
-                        <?php } ?>
-                        </select>
-                </div>
-
+        <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select name="category_id" id="category" class="form-select" required>
+                <option value="">-- Select Category --</option>
+                <?php while($row = mysqli_fetch_assoc($result)) { ?>
+                        <option value="<?php echo $row['id']; ?>">
+                        <?php echo htmlspecialchars($row['name']); ?>
+                        </option>
+                <?php } ?>
+                </select>
+        </div>
             <div class="form-field mb-4">
                     <input type="text" name="productName" class="form-control" id="productName" placeholder="Enter ProductName:">
             </div>
@@ -109,5 +106,5 @@ $result = mysqli_query($conn, $sqlCategories);
 
     </div>
 <?php
-include("templates/footer.php");
+include("../templates/footer.php");
 ?>

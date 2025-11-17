@@ -37,14 +37,6 @@ if(isset($_POST["create"])){
         echo "Your files are not allowed!";
     }
 
-   
-    // if(mysqli_query($conn, $sqlInsert)){
-    //     session_start();
-    //     $_SESSION["create"] = "Product added successfully!";
-    //     header("Location: index.php");
-    // }else{
-    //     die("Data is not inserted! " . mysqli_error($conn));
-    // }
 }
 
 ?>
@@ -64,12 +56,6 @@ if(isset($_POST["update"])){
        // Текущото изображение от скритото поле
     $currentImage = mysqli_real_escape_string($conn, $_POST["current_image"]);
     $newImage = $currentImage; // по подразбиране запазваме старото
-
-    // $fileName = $_FILES["image"]["name"];
-    // $ext = pathinfo($fileName, PATHINFO_EXTENSION);
-    // $allowedTypes = array("jpg","jpeg","png", "gif");
-    // $tempName = $_FILES["image"]["tmp_name"];
-    // $targetPath = "uploads/".$fileName;
 
     // Проверка дали е качен нов файл
     if (!empty($_FILES['image']['name'])) {

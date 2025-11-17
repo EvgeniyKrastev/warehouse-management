@@ -1,5 +1,5 @@
 <?php
-include("templates/header.php");
+include("../templates/header.php");
 ?>
 
 <div class="post w-100 bg-light p-5">
@@ -35,5 +35,5 @@ include("templates/header.php");
 </div>
 
 <?php
-include("templates/footer.php");
+include("../templates/footer.php");
 ?>

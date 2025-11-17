@@ -1,5 +1,5 @@
 <?php
-include("templates/header.php");
+include("../templates/header.php");
 ?>
     <?php
     $id = $_GET['id'];
@@ -107,5 +107,5 @@ include("templates/header.php");
     </div>
 
 <?php
-include("templates/footer.php");
+include("../templates/footer.php");
 ?>
