@@ -1,4 +1,5 @@
-database warehouse_management
+database
+ warehouse_management
 
 table categories columns id , name
 
