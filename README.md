@@ -7,7 +7,7 @@ Functionalities:
 
   -create read update delete product (drop down menu for categories).
 
-  - data base with 3 tables categories products users.
+  - data base with 3 tables categories(with CRUD) products users.
 
   -if you aren't logged in you can't view or work with data.
 
