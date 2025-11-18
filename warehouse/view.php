@@ -12,20 +12,22 @@ include("../templates/header.php");
         $result = mysqli_query($conn, $sqlSelectPost);
         while($data = mysqli_fetch_array($result)){
             ?>
-                <h1><?php echo $data['productName']; ?></h1>
-                <div class="form-field mb-4">
-                <label for="image" class="form-label">Current Photo:</label><br>
+
+                <div class="card" style="width: 13rem;">
                 <?php if (!empty($data['image'])): ?>
-                    <img src="uploads/<?php echo htmlspecialchars($data['image']); ?>" 
-                        alt="Current Image" 
-                        style="max-width:150px; height:auto; border:1px solid #ccc; margin-bottom:10px;">
-                <?php else: ?>
-                    <p>No image uploaded</p>
-                <?php endif; ?>
+                        <img src="uploads/<?php echo htmlspecialchars($data['image']); ?>" 
+                            alt="Current Image" 
+                            style="border-radius: 2%">
+                    <?php else: ?>
+                        <p>No image uploaded</p>
+                    <?php endif; ?>
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $data['productName']; ?></h5>
+                    <p class="card-text"><?php echo $data['comments']; ?></p>
+                    <p>Price for one: <?php echo $data['sellPrice']; ?></p>
+                    <p>Quantity: <?php echo $data["quantity"]?></p>
+                </div>
             </div>
-                <p>Comment: <?php echo $data['comments']; ?></p>
-                <p>Price for one: <?php echo $data['sellPrice']; ?></p>
-                <p>Quantity: <?php echo $data["quantity"]?></p>
             <?php
         }
     }else{
